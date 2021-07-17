@@ -1,7 +1,5 @@
 # awsApirest
 
-# sqlalchemyRetationship
-
 # Título del Proyecto
 
 APIREST con Alojamiento en AWS

@@ -4,6 +4,7 @@ from .models import (Folder,
     FolderCategory,
     File,
     FileType,
+    FilesRegister
     )
 
 class FolderSerializer(serializers.HyperlinkedModelSerializer):
@@ -25,3 +26,14 @@ class FileTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FileType
         fields = ['id','name', 'icon']
+
+class FilesRegisterSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = FilesRegister
+        fields = ['id',
+            'name', 
+            'csv_lines',
+            'csv_size_in_kb',
+            'txt_lines',
+            'txt_size_in_kb',
+        ]

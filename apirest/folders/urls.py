@@ -2,8 +2,8 @@ from django.urls import path
 from folders import views
 
 urlpatterns = [
-    path('folders_delete/<int:id>', views.DeleteFolder.as_view(), name='Delete Folder'),
-    path('CountSize/<int:id>', views.CountSize.as_view(), name='Count Size'),
-    path('CountFile/<int:id>', views.CountFile.as_view(), name='Count File'),
-    path('SubfilesFiles/', views.SubfilesFiles.as_view(), name='Subfile File'),
+    path('folders_delete/<int:id>', views.CountFolderSizeView.as_view(), name='delete_folder'),
+    path('countsize/<int:id>', views.CountFolderSizeView.as_view(), name='count_size'),
+    path('countfiles/<int:id>', views.CountFileView.as_view(), name='countfiles'),
+    path('filesestructure/', views.FilesEstructureView.as_view(), name='filesestructure'),
 ]

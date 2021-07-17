@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'storages',
     'folders',
     'rest_framework',
-    'rest_framework_api_key',
+    "rest_framework_api_key",
 ]
 
 MIDDLEWARE = [
@@ -58,12 +58,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'apirest.urls'
-
-REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework_api_key.permissions.HasAPIKey",
-    ]
-}
 
 TEMPLATES = [
     {
@@ -163,8 +157,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-print("URL estatica")
-print(STATIC_URL)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 DEFAULT_FILE_STORAGE = 'apirest.storage_backends.MediaStorage'

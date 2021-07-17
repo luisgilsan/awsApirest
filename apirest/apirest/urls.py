@@ -24,6 +24,7 @@ from folders.views import (
     FolderCategoryViewSet,
     FileViewSet,
     FileTypeViewSet,
+    FilesRegisterViewSet,
 )
 
 
@@ -33,6 +34,8 @@ router.register(r'folders', FolderViewSet)
 router.register(r'foldercategories', FolderCategoryViewSet)
 router.register(r'files', FileViewSet)
 router.register(r'filetypes', FileTypeViewSet)
+router.register(r'filesregister', FilesRegisterViewSet)
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
